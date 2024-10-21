@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination List</title>
+
+    <style>
+        /* Basic page reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling for the body section */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 200px;
+            background-color: #2f4f4f;
+            height: 100vh;
+            position: fixed;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Sidebar link styles */
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            color: #f8f8f8;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #4682b4; /* Steel blue hover effect */
+        }
+
+        /* Main content area */
+        .content {
+            margin-left: 220px;
+            padding: 40px;
+            max-width: 1000px;
+        }
+
+        /* Header for the page */
+        .page-header {
+            background-color: #4682b4;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+            font-size: 30px;
+            border-radius: 8px;
+        }
+
+        /* New description under the header */
+        .page-description {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        /* Unordered list style for the destination list */
+        ul.guides-list {
+            list-style-type: none;
+            margin-left: 0;
+        }
+
+        ul.guides-list li {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        ul.guides-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        ul.guides-list li h2 {
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        ul.guides-list li p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Adjusting the image size */
+        ul.guides-list li img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Contact Me button styling */
+        .contact-me {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 12px 20px;
+            background-color: #4682b4;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-me:hover {
+            background-color: #5a9bd3;
+            transform: translateY(-3px);
+        }
+
+        /* Sidebar for links to sections */
+        .section-links {
+            position: fixed;
+            right: 20px;
+            top: 100px;
+            width: 180px;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section-links ul li {
+            margin-bottom: 15px;
+        }
+
+        .section-links ul li a {
+            text-decoration: none;
+            color: #4682b4;
+            font-size: 16px;
+        }
+
+        .section-links ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            .content {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .section-links {
+                position: static;
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            ul.guides-list li img {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar for navigation -->
+    <div class="sidebar">
+        <ul>
+            <!-- Added homepage link -->
+            <li><a href="homepage.html">Homepage</a></li>
+            <li><a href="destination-lists.html">Destination Lists</a></li>
+            <li><a href="travel-guides.html">Travel Guides</a></li>
+            <li><a href="travel-tips.html">Travel Tips</a></li>
+            <li><a href="travel-reviews.html">Travel Reviews</a></li>
+        </ul>
+    </div>
+
+    <!-- Section links on the right side -->
+    <div class="section-links">
+        <ul>
+            <li><a href="#paris">Paris</a></li>
+            <li><a href="#tokyo">Tokyo</a></li>
+            <li><a href="#cape-town">Cape Town</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content section for Destination List -->
+    <section class="content">
+        <header class="page-header">
+            Destination List
+        </header>
+
+        <!-- Page description under the header -->
+        <div class="page-description">
+            This page highlights some of the most popular tourist destinations around the world. Choosing the right destination is a crucial part of planning a trip, as it significantly impacts the overall experience and satisfaction. Each city or region offers unique attractions, including culture, history, natural beauty, and cuisine, all of which should align with the traveler’s preferences and goals.
+        </div>
+
+        <!-- Unordered list for destination list -->
+        <ul class="guides-list">
+            <li id="paris">
+                <h2>Explore Paris: Landmarks and Cuisine</h2>
+                <img src="https://i.imgur.com/7Wc71ci.png" alt="Paris Landmarks">
+                <p><strong>Paris</strong> is a city that captures the heart of every traveler. From the iconic Eiffel Tower to the art-filled Louvre Museum, there's no shortage of sights to see. Stroll through the charming streets of Montmartre or relax along the Seine River.</p>
+                <p>Make sure to indulge in Parisian delicacies such as fresh croissants, escargot, and world-class pastries. A trip to Paris is an unforgettable journey through <strong>culture, cuisine, and history</strong>.</p>
+
+                <!-- YouTube video embed -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/eNOHM_UypBc" title="Paris Travel Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>This video provides more information about Paris, uploaded by the YouTuber <strong>"Exotic Vacation"</strong>.</p>
+            </li>
+
+            <li id="tokyo">
+                <h2>Tokyo: Culture, Food, and Technology</h2>
+                <img src="https://i.imgur.com/Mb2ObBG.jpeg" alt="Tokyo Cityscape">
+                <p><strong>Tokyo</strong> is a city where the past and future coexist harmoniously. Discover ancient temples like Senso-ji, enjoy tranquil moments in traditional tea houses, or marvel at the ultra-modern skyscrapers and technology hubs of Shibuya and Shinjuku.</p>
+                <p>Tokyo's food scene is world-renowned. Whether you're tasting fresh sushi at Tsukiji Market or savoring the rich flavors of ramen, Tokyo offers a culinary adventure like no other.</p>
+
+                <!-- YouTube video embed -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/77lWbSfnF_g" title="Tokyo Travel Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>This video provides more information about Tokyo, uploaded by the YouTuber <strong>"Hungry Passport"</strong>.</p>
+            </li>
+
+            <li id="cape-town">
+                <h2>Cape Town: Nature and Adventure</h2>
+                <img src="https://i.imgur.com/CG22Pnm.jpeg" alt="Cape Town Landscape">
+                <p><strong>Cape Town</strong> is the perfect destination for nature lovers and thrill-seekers alike. Hike up Table Mountain for breathtaking views, explore the Cape Peninsula's dramatic coastline, or visit the historic Robben Island.</p>
+                <p>With its stunning beaches, adventurous activities, and vibrant culture, Cape Town promises an unforgettable journey filled with excitement and discovery.</p>
+
+                <!-- YouTube video embed -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1Ppoi0uLuDo" title="Cape Town Travel Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>This video provides more information about Cape Town, uploaded by the YouTuber <strong>"World Wide Hearts"</strong>.</p>
+            </li>
+        </ul>
+
+        <!-- Contact Me button -->
+        <a href="mailto:sjoo2@albany.edu" class="contact-me">Contact Me!</a>
+    </section>
+</body>
+</html>

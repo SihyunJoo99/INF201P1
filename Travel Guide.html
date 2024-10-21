@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guides</title>
+
+    <style>
+        /* Basic page reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling for the body section */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8; 
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Sidebar styling for navigation */
+        .sidebar {
+            width: 200px;
+            background-color: #2f4f4f;
+            height: 100vh;
+            position: fixed;
+            padding: 20px;
+            left: 0;
+            top: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Sidebar link styles */
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            color: #f8f8f8;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #4682b4; /* Steel blue hover effect */
+        }
+
+        /* Main content area */
+        .content {
+            padding: 40px;
+            max-width: 1000px;
+            margin-left: 220px; /* Adjust content for left sidebar */
+        }
+
+        /* Header for the page */
+        .page-header {
+            background-color: #4682b4; 
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+            font-size: 30px;
+            border-radius: 8px;
+        }
+
+        /* Welcome message styling */
+        .welcome-message {
+            margin-bottom: 30px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .welcome-message strong {
+            font-weight: bold;
+            color: #4682b4;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%; /* Full width for larger table */
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 15px; /* Increased padding for larger table */
+            text-align: center;
+            font-size: 16px; /* Slightly larger font size for better readability */
+        }
+
+        th {
+            background-color: #4682b4;
+            color: white;
+        }
+
+        td {
+            background-color: #f8f8f8;
+        }
+
+        /* Scroll down message styling */
+        .scroll-message {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Link to sections styling on right */
+        .guide-links {
+            position: fixed;
+            right: 20px;
+            top: 120px;
+            width: 200px;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ordered list for the right side navigation links */
+        .guide-links ol {
+            padding-left: 20px;
+            list-style-type: decimal; /* Ordered list style */
+        }
+
+        .guide-links ol li {
+            margin-bottom: 15px; /* Increased margin for spacing */
+            font-size: 16px; /* Reduced font size to fit in one line */
+        }
+
+        .guide-links a {
+            text-decoration: none;
+            color: #4682b4;
+        }
+
+        .guide-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Styling for the guide content */
+        .guide-content {
+            margin-bottom: 30px;
+        }
+
+        .guide-content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .guide-content p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Ordered list for guide content */
+        .guide-content ol {
+            padding-left: 20px;
+            list-style-type: decimal;
+        }
+
+        /* Contact Me button styling */
+        .contact-me {
+            display: block;
+            width: 200px; 
+            margin: 30px auto;
+            padding: 12px 20px;
+            background-color: #4682b4; 
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-me:hover {
+            background-color: #5a9bd3; 
+            transform: translateY(-3px);
+        }
+
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            .content {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .guide-links {
+                position: static;
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            table, th, td {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar for navigation -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="homepage.html">Homepage</a></li>
+            <li><a href="destination-lists.html">Destination Lists</a></li>
+            <li><a href="travel-guides.html">Travel Guides</a></li>
+            <li><a href="travel-tips.html">Travel Tips</a></li>
+            <li><a href="travel-reviews.html">Travel Reviews</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content section for Travel Guides -->
+    <section class="content">
+        <header class="page-header">
+            Travel Guides
+        </header>
+
+        <!-- Welcome message -->
+        <div class="welcome-message">
+            <p><strong>Welcome, first-time travelers!</strong> Planning your first trip can be overwhelming, but don’t worry! We’re here to guide you. Below, we’ve listed a few important factors to consider when choosing your next travel destination. Based on these criteria, we’ve also organized some top destinations to help you decide where to go.</p>
+        </div>
+
+        <!-- Table for travel destinations based on criteria -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Purpose</th>
+                    <th>Recommended Destinations</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Relaxation</td>
+                    <td>Bali, Maldives, Santorini, Fiji, Seychelles</td>
+                </tr>
+                <tr>
+                    <td>Adventure</td>
+                    <td>New Zealand, Patagonia, Colorado, Nepal, Iceland</td>
+                </tr>
+                <tr>
+                    <td>Culture & History</td>
+                    <td>Rome, Kyoto, Cairo, Athens, Beijing</td>
+                </tr>
+                <tr>
+                    <td>Family Trip</td>
+                    <td>Orlando, Tokyo Disney, Paris, London, Sydney</td>
+                </tr>
+                <tr>
+                    <td>Budget Travel</td>
+                    <td>Thailand, Vietnam, Portugal, Mexico, Hungary</td>
+                </tr>
+                <tr>
+                    <td>Wellness Travel</td>
+                    <td>Bali, Costa Rica, Kerala, Sedona, Switzerland</td>
+                </tr>
+                <tr>
+                    <td>Natural Landscapes</td>
+                    <td>Norway, Canada, New Zealand, Chile, Alaska</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Scroll down message -->
+        <div class="scroll-message">
+            Scroll down for more details
+        </div>
+
+        <!-- Ordered list for section links on the right -->
+        <div class="guide-links">
+            <ol>
+                <li><a href="#duration">Travel Duration</a></li>
+                <li><a href="#language">Language</a></li>
+                <li><a href="#transport">Local Transport and Mobility</a></li>
+                <li><a href="#season">Travel Season and Climate</a></li>
+                <li><a href="#visa">Visa and Entry Requirements</a></li>
+                <li><a href="#currency">Currency Exchange and Cost of Living</a></li>
+                <li><a href="#safety">Safety and Security</a></li>
+                <li><a href="#events">Special Events or Festivals</a></li>
+                <li><a href="#food">Food and Culinary Culture</a></li>
+                <li><a href="#wellness">Wellness Travel</a></li>
+                <li><a href="#nature">Natural Environment and Landscapes</a></li>
+            </ol>
+        </div>
+
+        <!-- Travel guide content with ordered list style -->
+        <div class="guide-content" id="duration">
+            <h2>Travel Duration</h2>
+            <p>The length of your trip is an important factor in choosing the right destination. For short trips, it's better to choose locations that are closer and easier to access, while longer trips offer more opportunities to travel to distant places.</p>
+        </div>
+
+        <div class="guide-content" id="language">
+            <h2>Language</h2>
+            <p>Consider the language spoken in your destination. If you don’t speak the local language, traveling to places where English is commonly spoken or using translation apps can make your experience more comfortable.</p>
+        </div>
+
+        <div class="guide-content" id="transport">
+            <h2>Local Transport and Mobility</h2>
+            <p>Check if the destination has well-developed public transportation or if you’ll need to rent a car. In some rural areas, getting around might be more challenging, so planning ahead for transportation is important.</p>
+        </div>
+
+        <div class="guide-content" id="season">
+            <h2>Travel Season and Climate</h2>
+            <p>The season and weather conditions can greatly affect your travel experience. For example, summer may be too hot for tropical destinations, while winter offers skiing and other snow activities.</p>
+        </div>
+
+        <div class="guide-content" id="visa">
+            <h2>Visa and Entry Requirements</h2>
+            <p>It’s essential to verify the visa requirements and entry conditions of your chosen destination. Some countries may require visas or specific documentation, especially for longer stays or multi-country trips.</p>
+        </div>
+
+        <div class="guide-content" id="currency">
+            <h2>Currency Exchange and Cost of Living</h2>
+            <p>Currency exchange rates and local cost of living should be considered when planning your travel budget. Visiting destinations with lower costs can allow you to stretch your budget further and enjoy more experiences.</p>
+        </div>
+
+        <div class="guide-content" id="safety">
+            <h2>Safety and Security</h2>
+            <p>The safety and security of the destination is a crucial consideration. Make sure to check the crime rate, natural disaster risk, and political stability before traveling to ensure a safe trip.</p>
+        </div>
+
+        <div class="guide-content" id="events">
+            <h2>Special Events or Festivals</h2>
+            <p>Special local events or festivals can enhance your travel experience. For example, the Carnival in Brazil or Oktoberfest in Germany offers unique cultural experiences and can make your trip more memorable.</p>
+        </div>
+
+        <div class="guide-content" id="food">
+            <h2>Food and Culinary Culture</h2>
+            <p>Local food is a big part of the travel experience. Choose destinations where you can enjoy your favorite cuisine or try new and exciting foods to make your journey more enjoyable.</p>
+        </div>
+
+        <div class="guide-content" id="wellness">
+            <h2>Wellness Travel</h2>
+            <p>If you're seeking relaxation and rejuvenation, consider destinations known for wellness activities such as spas, hot springs, or meditation retreats.</p>
+        </div>
+
+        <div class="guide-content" id="nature">
+            <h2>Natural Environment and Landscapes</h2>
+            <p>The natural environment plays a significant role in the overall travel experience. Whether you enjoy beaches, mountains, forests, or lakes, choosing destinations with stunning landscapes can enhance your trip.</p>
+        </div>
+
+        <!-- Contact Me button -->
+        <a href="mailto:sjoo2@albany.edu" class="contact-me">Contact Me!</a>
+    </section>
+</body>
+</html>

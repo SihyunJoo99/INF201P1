@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Reviews</title>
+
+    <style>
+        /* Basic page reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling for the body section */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 200px;
+            background-color: #2f4f4f;
+            height: 100vh;
+            position: fixed;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Sidebar link styles */
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            color: #f8f8f8;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #4682b4; /* Steel blue hover effect */
+        }
+
+        /* Main content area, occupying full width minus the sidebar */
+        .content {
+            margin-left: 220px;
+            padding: 40px;
+            width: calc(100% - 240px); /* Adjusted for full width */
+        }
+
+        /* Page header styling */
+        .page-header {
+            background-color: #4682b4;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+            font-size: 30px;
+            border-radius: 8px;
+        }
+
+        /* Styling for reviews section */
+        .reviews {
+            margin-bottom: 40px;
+        }
+
+        .review {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .review h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .review p {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .review .stars {
+            color: gold;
+            font-size: 20px;
+        }
+
+        /* Review form styling */
+        .review-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-form label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .review-form input,
+        .review-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .review-form button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4682b4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .review-form button:hover {
+            background-color: #5a9bd3;
+        }
+
+        /* Contact Me button styling */
+        .contact-me {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 12px 20px;
+            background-color: #4682b4;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-me:hover {
+            background-color: #5a9bd3;
+            transform: translateY(-3px);
+        }
+
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            .content {
+                margin-left: 0;
+                padding: 20px;
+                width: 100%;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar for navigation -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="homepage.html">Homepage</a></li>
+            <li><a href="destination-lists.html">Destination Lists</a></li>
+            <li><a href="travel-guides.html">Travel Guides</a></li>
+            <li><a href="travel-tips.html">Travel Tips</a></li>
+            <li><a href="travel-reviews.html">Travel Reviews</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content section -->
+    <section class="content">
+        <header class="page-header">
+            User Reviews
+        </header>
+
+        <!-- Reviews section -->
+        <div class="reviews">
+            <div class="review">
+                <h3>John Doe - Italy</h3>
+                <p>I visited Italy last summer, and it was an unforgettable experience. The food was incredible, especially the pasta and pizza, and the historical sites like the Colosseum were breathtaking.</p>
+                <p class="stars">Rating: ★★★★☆</p>
+            </div>
+
+            <div class="review">
+                <h3>Jane Smith - Japan</h3>
+                <p>Japan is such a beautiful country with a rich culture. I loved visiting the temples and experiencing the peaceful atmosphere. The food was also amazing, especially the sushi and ramen.</p>
+                <p class="stars">Rating: ★★★★★</p>
+            </div>
+
+            <div class="review">
+                <h3>Michael Johnson - Australia</h3>
+                <p>Australia has some of the most stunning beaches I've ever seen. The Great Barrier Reef was a highlight, and the wildlife is so unique. It was a great trip for nature lovers!</p>
+                <p class="stars">Rating: ★★★★☆</p>
+            </div>
+
+            <div class="review">
+                <h3>Emily Davis - France</h3>
+                <p>France was everything I imagined and more. The architecture in Paris was stunning, and the local cafes offered the best pastries I've ever had. The countryside was also incredibly beautiful.</p>
+                <p class="stars">Rating: ★★★★★</p>
+            </div>
+
+            <div class="review">
+                <h3>David Brown - Thailand</h3>
+                <p>Thailand is such a vibrant and exciting place to visit. The markets are lively, the food is delicious, and the beaches are picture-perfect. The people were so welcoming as well.</p>
+                <p class="stars">Rating: ★★★★☆</p>
+            </div>
+        </div>
+
+        <!-- Review form for users to submit their reviews -->
+        <section class="review-form">
+            <h2>Leave Your Review</h2>
+            <form>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                <label for="country">Country Visited:</label>
+                <input type="text" id="country" name="country" placeholder="Country you visited">
+
+                <label for="review">Your Review:</label>
+                <textarea id="review" name="review" rows="5" placeholder="Write about your experience"></textarea>
+
+                <label for="rating">Rating (out of 5):</label>
+                <input type="number" id="rating" name="rating" min="1" max="5" placeholder="Rating out of 5">
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+
+        <!-- Contact Me button at the bottom -->
+        <a href="mailto:sjoo2@albany.edu" class="contact-me">Contact Me!</a>
+
+    </section>
+</body>
+</html>
